@@ -21,6 +21,8 @@ public class WordGame {
         String userInput;
         boolean isWord;
         
+        GenerateWord:
+        
         // Loop until the game either runs out of guesses or the user gets the word correct.
         GuessingGame:
         for (int i = 0; i < TOTAL_GUESSES; ++i) {
@@ -65,6 +67,14 @@ public class WordGame {
     // Generate Word - Generates a random number anduses it as the index of an array.
     public static void generateWord() {
         
+        String[][] wordsAndHints = {{"Cow", "Moo"},{"Cat", "Meow"}};
+        
+        int randomNum;
+        
+        // Generate Math.random andcast to int for randomNum
+        
+        word = wordsAndHints[randomNum][0];
+        hint = wordsAndHints[randomNum][1];
         
         
     }
