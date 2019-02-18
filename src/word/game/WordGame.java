@@ -67,13 +67,13 @@ public class WordGame {
     // Generate Word - Generates a random number anduses it as the index of an array.
     public static void generateWord() {
         
-        String[][] wordsAndHints = {{"Cow", "Moo"},{"Cat", "Meow"}};
+         String[][] wordsAndHints = {{"Cow", "Moo"},{"Cat", "Meow"},{"Dog","Woof"},{"Duck","Quack"},{"Phone","Ring,Ring"},{"Snake","Hiss"}};
         
         int randomNum;
         
         randomNum = (int)(Math.random() * ((wordsAndHints.length - 0) + 1)) + 0;
         
-        System.out.println(randomNum);
+        
               
         word = wordsAndHints[randomNum][0];
         hint = wordsAndHints[randomNum][1];
