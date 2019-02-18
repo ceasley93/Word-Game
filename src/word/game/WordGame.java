@@ -19,7 +19,7 @@ public class WordGame {
         Scanner input = new Scanner(System.in);
         
         String userInput;
-        boolean isWord;
+        boolean isWord = false;
         
         generateWord();
         
@@ -39,7 +39,7 @@ public class WordGame {
                 
             }
             
-            if (i == 2) {
+            if (i == 1) {
                 
                 System.out.println("Hint: " + hint);
                 
@@ -48,7 +48,10 @@ public class WordGame {
         }
         
         // Ifstatement if the answer was gotten or if the guesses ran out.
-        
+        if(isWord)
+            System.out.println("You got it correct! The word is " + word);
+        else
+            System.out.println("You ran out of guesses. The word was " + word);
     }
     
     // Compare - Compares
@@ -71,7 +74,7 @@ public class WordGame {
         
         int randomNum;
         
-        randomNum = (int)(Math.random() * ((wordsAndHints.length - 0) + 1)) + 0;
+        randomNum = (int)(Math.random() * ((wordsAndHints.length - 1) + 1)) + 0;
         
         
               
