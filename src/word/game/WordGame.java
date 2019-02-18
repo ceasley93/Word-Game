@@ -71,8 +71,10 @@ public class WordGame {
         
         int randomNum;
         
-        randomNum = (int)(Math.random() * (wordsAndHints.length - 1)) + 1;
+        randomNum = (int)(Math.random() * ((wordsAndHints.length - 0) + 1)) + 0;
         
+        System.out.println(randomNum);
+              
         word = wordsAndHints[randomNum][0];
         hint = wordsAndHints[randomNum][1];
         
