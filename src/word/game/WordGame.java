@@ -20,12 +20,13 @@ public class WordGame {
         
         String userInput;
         boolean isWord = false;
+        int i = 0;
         
         generateWord();
         
         // Loop until the game either runs out of guesses or the user gets the word correct.
         GuessingGame:
-        for (int i = 0; i < TOTAL_GUESSES; ++i) {
+        while (!isWord) {
             
             System.out.print("Enter in your guess >> ");
             userInput = input.nextLine();
@@ -44,6 +45,7 @@ public class WordGame {
                 System.out.println("Hint: " + hint);
                 
             } 
+            i++;
             
         }
         
@@ -74,9 +76,7 @@ public class WordGame {
         
         int randomNum;
         
-        randomNum = (int)(Math.random() * ((wordsAndHints.length - 1) + 1)) + 0;
-        
-        
+        randomNum = (int)(Math.random() * ((wordsAndHints.length - 1) + 1)) + 0;    
               
         word = wordsAndHints[randomNum][0];
         hint = wordsAndHints[randomNum][1];
